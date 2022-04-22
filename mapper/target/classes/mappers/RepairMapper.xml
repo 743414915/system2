@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.fmmall.dao.RepairMapper">
+    <resultMap id="BaseResultMap" type="com.qfedu.fmmall.entity.Repair">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="repairId" jdbcType="INTEGER" property="repairid"/>
+        <result column="reportPerson" jdbcType="VARCHAR" property="reportperson"/>
+        <result column="reportDate" jdbcType="TIMESTAMP" property="reportdate"/>
+        <result column="repairContext" jdbcType="VARCHAR" property="repaircontext"/>
+        <result column="finishDate" jdbcType="TIMESTAMP" property="finishdate"/>
+    </resultMap>
+
+    <resultMap id="repairVOMap" type="com.qfedu.fmmall.entity.RepairVO">
+        <id column="userId" jdbcType="INTEGER" property="userId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="department" jdbcType="VARCHAR" property="department"/>
+        <result column="hostelNum" jdbcType="VARCHAR" property="hostelNum"/>
+
+        <result column="repairId" jdbcType="INTEGER" property="repairId"/>
+        <result column="reportDate" jdbcType="TIMESTAMP" property="reportDate"/>
+        <result column="repairContext" jdbcType="VARCHAR" property="repairContext"/>
+        <result column="finishDate" jdbcType="TIMESTAMP" property="finishDate"/>
+    </resultMap>
+
+    <select id="selectRepairByName" resultMap="repairVOMap">
+        SELECT u.userId,
+               u.NAME,
+               u.department,
+               u.hostelNum,
+               r.repairId,
+               r.reportDate,
+               r.repairContext,
+               r.finishDate
+        FROM users u
+                 INNER JOIN REPAIR r ON u.NAME = r.reportPerson
+        WHERE u.NAME = #{name}
+        ORDER BY r.finishDate
+        LIMIT #{startPage},#{count}
+    </select>
+</mapper>

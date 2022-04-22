@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.fmmall.dao.LostandfoundMapper">
+    <resultMap id="BaseResultMap" type="com.qfedu.fmmall.entity.Lostandfound">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="context" jdbcType="VARCHAR" property="context"/>
+        <result column="releaseDate" jdbcType="TIMESTAMP" property="releasedate"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+    </resultMap>
+
+    <select id="SelectLike" resultMap="BaseResultMap">
+        SELECT *
+        FROM lostandfound
+        WHERE context LIKE #{keyword}
+    </select>
+</mapper>

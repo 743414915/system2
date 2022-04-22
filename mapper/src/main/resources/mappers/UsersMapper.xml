@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.fmmall.dao.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.qfedu.fmmall.entity.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="resqitdate" jdbcType="TIMESTAMP" property="resqitdate" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="hostelNum" jdbcType="VARCHAR" property="hostelnum" />
+    <result column="frozen" jdbcType="INTEGER" property="frozen" />
+  </resultMap>
+</mapper>
