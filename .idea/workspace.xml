@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6694b409-6d62-4bc2-b2e8-b9602d2701cb" name="Default Changelist" comment="" />
+    <list default="true" id="6694b409-6d62-4bc2-b2e8-b9602d2701cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +62,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -231,7 +234,7 @@
       <workItem from="1648964170527" duration="8447000" />
       <workItem from="1649724829221" duration="5261000" />
       <workItem from="1650503538193" duration="1420000" />
-      <workItem from="1650610707818" duration="891000" />
+      <workItem from="1650610707818" duration="2166000" />
     </task>
     <servers />
   </component>
@@ -263,10 +266,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649384733257" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1646016867415">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1650611948605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1646016867415" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1650611948605" />
     <state width="1247" height="196" key="GridCell.Tab.0.bottom" timestamp="1650507965548">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -315,10 +318,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1247" height="196" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1650507965548" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1646017899733">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1650612774144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1646017899733" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1650612774144" />
     <state width="200" height="523" key="SqlResolveConfigurable" timestamp="1646016874741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
