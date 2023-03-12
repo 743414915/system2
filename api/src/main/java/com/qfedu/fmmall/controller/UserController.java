@@ -84,7 +84,14 @@ public class UserController {
 
     @GetMapping("/selectAllNotBy")
     @ApiOperation("查询所有用户接口")
-    public ResultVO selectAllNotBy(){
+    public ResultVO selectAllNotBy() {
         return userService.selectAllNotBy();
+    }
+
+
+    @GetMapping("/manageUser")
+    @ApiOperation("管理所有用户信息接口")
+    public ResultVO manageUser() {
+        return userService.manageUser();
     }
 }

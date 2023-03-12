@@ -4,6 +4,7 @@ import com.qfedu.fmmall.dao.LogindateMapper;
 import com.qfedu.fmmall.dao.UsersMapper;
 import com.qfedu.fmmall.entity.Logindate;
 import com.qfedu.fmmall.entity.Users;
+import com.qfedu.fmmall.entity.ManageUserVO;
 import com.qfedu.fmmall.service.UserService;
 import com.qfedu.fmmall.utils.MD5Utils;
 import com.qfedu.fmmall.vo.ResStatus;
@@ -18,7 +19,10 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -34,7 +38,7 @@ public class UserServiceImpl implements UserService {
     public ResultVO queryUserByName(String userName, String password) {
         Example example = new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("name",userName);
+        criteria.andEqualTo("name", userName);
         List<Users> users = usersMapper.selectByExample(example);
 
         if (users.size() == 0) {
@@ -191,12 +195,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public ResultVO selectAllNotBy() {
         List<Users> users = usersMapper.selectAll();
-        if(users.size()>0){
+        if (users.size() > 0) {
             return new ResultVO(ResStatus.OK, "查询成功", users);
-        }else{
+        } else {
             return new ResultVO(ResStatus.NO, "查询失败", null);
         }
     }
 
+    @Override
+    public ResultVO manageUser() {
+        List<ManageUserVO> manageUserVO = usersMapper.selectManageUser();
+        if (manageUserVO.size() > 0) {
+            return new ResultVO(ResStatus.OK, "查询成功", manageUserVO);
+        } else {
+            return new ResultVO(ResStatus.NO, "查询失败", null);
+        }
+    }
 
 }

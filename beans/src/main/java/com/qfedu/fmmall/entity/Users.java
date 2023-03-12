@@ -12,6 +12,11 @@ public class Users {
 
     private String password;
 
+    /**
+     * 账号权限   1为管理员   0为用户
+     */
+    private String realname;
+
     private Date resqitdate;
 
     private String logo;
@@ -31,6 +36,8 @@ public class Users {
      * 用来判断账号是否封禁，为0时正常，为1时表示被冻结。该账号异常，无法登录
      */
     private Integer frozen;
+
+    private Integer permissions;
 
     /**
      * @return userId
@@ -72,6 +79,24 @@ public class Users {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * 获取账号权限   1为管理员   0为用户
+     *
+     * @return realname - 账号权限   1为管理员   0为用户
+     */
+    public String getRealname() {
+        return realname;
+    }
+
+    /**
+     * 设置账号权限   1为管理员   0为用户
+     *
+     * @param realname 账号权限   1为管理员   0为用户
+     */
+    public void setRealname(String realname) {
+        this.realname = realname;
     }
 
     /**
@@ -154,5 +179,19 @@ public class Users {
      */
     public void setFrozen(Integer frozen) {
         this.frozen = frozen;
+    }
+
+    /**
+     * @return permissions
+     */
+    public Integer getPermissions() {
+        return permissions;
+    }
+
+    /**
+     * @param permissions
+     */
+    public void setPermissions(Integer permissions) {
+        this.permissions = permissions;
     }
 }

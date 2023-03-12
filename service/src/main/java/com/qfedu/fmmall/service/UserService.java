@@ -24,4 +24,6 @@ public interface UserService {
     public ResultVO uploadAvatar(Integer userId, MultipartFile file);
 
     public ResultVO selectAllNotBy();
+
+    public ResultVO manageUser();
 }
